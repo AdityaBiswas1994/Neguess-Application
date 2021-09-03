@@ -1,0 +1,29 @@
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script>
+            $.ajax({
+                type: "GET",
+                url: "/quizOutput",
+                data: {
+		"entity_type" : "person",
+		"difficulty" : "HARD",
+		"peer_function" : "facets"
+        },
+                headers: {"Accept-Encoding" : "gzip, deflate, br"},
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+                success: function (data) {
+
+                    alert(JSON.stringify(data));
+                },
+                error: function () {
+
+                },
+                complete: function () {
+
+                }
+            });
+</script>
