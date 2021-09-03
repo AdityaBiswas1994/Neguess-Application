@@ -3,4 +3,4 @@
  
  Want to play? ---> https://neguess.mpi-inf.mpg.de/
 
- This demo paper will be published in ISWC 2021. I will publish the paper once it is pulished in the ocnference. Stay tuned :) 
+ This demo paper will be published in ISWC on October, 2021. I will publish the paper once it is pulished in the ocnference. Stay tuned :) 
