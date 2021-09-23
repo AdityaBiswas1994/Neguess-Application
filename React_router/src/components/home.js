@@ -245,8 +245,12 @@ export default function Home() {
                 }
               </Grid>
               </Segment>
-                
-                <Details datatoChild={final} callback={handleQuestionChange}/>
+            	    
+            	{
+                  counter < 10 &&
+                  <Details datatoChild={final} callback={handleQuestionChange}/>
+                }
+
              </div>
               </Grid>
               <Grid item xs={4}>

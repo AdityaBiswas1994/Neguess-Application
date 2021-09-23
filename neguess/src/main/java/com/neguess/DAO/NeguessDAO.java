@@ -41,26 +41,7 @@ public class NeguessDAO {
 			ArrayList<String> entity_id = new ArrayList<>();
 			String entity = null;
 			if(type_id != null){
-				if (type_id.equalsIgnoreCase("Q5"))
-				{
-					ps=con.prepareStatement("Select \"ENTITIES\".\"ENTITY_ID\" from neguess_db.\"ENTITIES\" where \"ENTITIES\".\"TYPE_ID\" = '"+type_id+"' and \"ENTITIES\".\"ENTITY_POPULARITY\" >= 31000");
-				}
-				else if (type_id.equalsIgnoreCase("Q7725634"))
-				{
-					ps=con.prepareStatement("Select \"ENTITIES\".\"ENTITY_ID\" from neguess_db.\"ENTITIES\" where \"ENTITIES\".\"TYPE_ID\" = '"+type_id+"' and \"ENTITIES\".\"ENTITY_POPULARITY\" >= 7000");
-				}
-				else if (type_id.equalsIgnoreCase("Q4830453"))
-				{
-					ps=con.prepareStatement("Select \"ENTITIES\".\"ENTITY_ID\" from neguess_db.\"ENTITIES\" where \"ENTITIES\".\"TYPE_ID\" = '"+type_id+"' and \"ENTITIES\".\"ENTITY_POPULARITY\" >= 7000");
-				}
-				else if (type_id.equalsIgnoreCase("Q43229"))
-				{
-					ps=con.prepareStatement("Select \"ENTITIES\".\"ENTITY_ID\" from neguess_db.\"ENTITIES\" where \"ENTITIES\".\"TYPE_ID\" = '"+type_id+"' and \"ENTITIES\".\"ENTITY_POPULARITY\" >= 3600");
-				}
-				else if (type_id.equalsIgnoreCase("Q3624078"))
-				{
-					ps=con.prepareStatement("Select \"ENTITIES\".\"ENTITY_ID\" from neguess_db.\"ENTITIES\" where \"ENTITIES\".\"TYPE_ID\" = '"+type_id+"' and \"ENTITIES\".\"ENTITY_POPULARITY\" >= 100000");
-				}
+				ps=con.prepareStatement("Select \"ENTITIES\".\"ENTITY_ID\" from neguess_db.\"ENTITIES\" where \"ENTITIES\".\"TYPE_ID\" = '"+type_id+"' order by \"ENTITIES\".\"ENTITY_POPULARITY\" limit 50");
 				ResultSet result = ps.executeQuery();
 				while (result.next()) 
 				{
