@@ -3,4 +3,4 @@
  
  Want to play? ---> https://neguess.mpi-inf.mpg.de/
 
- This demo paper was be published in ISWC on October, 2021. 
+ This demo paper was be published in ISWC on October, 2021. Here is the link ---> http://ceur-ws.org/Vol-2980/paper350.pdf
